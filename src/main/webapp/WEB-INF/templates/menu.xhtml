@@ -9,7 +9,9 @@
 					outcome="/private/home.xhtml">
 					<i class="fa  fa-fw  fa-home"></i>Home</h:link></li>
 			<li><h:link>
-					<i class="fa  fa-fw  fa-compress"></i>Movimentações</h:link></li>
+					<i class="fa  fa-fw  fa-user"></i>Cadastro de usuário</h:link></li>
+			<li><h:link outcome="/private/cadastros/cadastrar-fornecedor.xhtml">
+					<i class="fa  fa-fw  fa-truck"></i>Cadastro de fornecedor</h:link></li>
 			<li
 				class="#{(view.viewId eq '/private/categorias/cadastrar-categoria.xhtml') or (view.viewId eq '/private/categorias/listar-categorias.xhtml') ? 'is-selected' : ''}">
 				<h:link outcome="/private/categorias/cadastrar-categoria.xhtml">
