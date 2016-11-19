@@ -55,12 +55,12 @@
 
 /* BOTÕES E LINKS */
 .botao-laranja {
-	background: rgba(249, 127, 52, 1) !important;
+	background: #2196f3 !important;
 	color: #fff !important;
 }
 
 .botao-laranja:hover {
-	background: rgba(252, 94, 0, 1) !important;
+	background: #2196f3 !important;
 	transition: none !important;
 }
 

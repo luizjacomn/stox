@@ -5,7 +5,7 @@
 	xmlns:p="http://primefaces.org/ui"
 	template="/WEB-INF/templates/layout.xhtml">
 
-	<ui:define name="titulo">Cadastrar Produto</ui:define>
+	<ui:define name="titulo">Cadastrar Usuário</ui:define>
 
 	<ui:define name="content">
 		<div class="ui-g">
@@ -15,70 +15,63 @@
 				<div class="ui-g-6 ui-md-6 ui-lg-6">
 					<p:messages autoUpdate="true" closable="true" />
 
-					<p:panel header="Cadastrar Produto" styleClass="uncq-title-panel">
+					<p:panel header="Cadastrar Usuário" styleClass="uncq-title-panel">
 
 						<f:facet name="actions">
-							<!-- <p:link value="Listar Produtos"
-								outcome="listar-produtos.xhtml"
+							<!-- <p:link value="Listar Usuários"
+								outcome="listar-usuarios.xhtml"
 								styleClass="link-navegacao" /> -->
 						</f:facet>
 
 						<h:form id="frm">
 							<h:panelGrid columns="1" style="width: 100%" cellpadding="5">
 								<p:outputLabel value="Nome: " for="nome" styleClass="label-form" />
-								<p:inputText id="nome" placeholder="Insira o nome do produto"
+								<p:inputText id="nome" placeholder="Insira o nome do usuário"
 									required="true" requiredMessage="O campo 'NOme' é obrigatório!"
 									value="#{cadastroCategoriaBean.categoria.descricao}"
 									style="width: 98%" />
 
-							
-								<p:outputLabel value="Código: " for="codigo"
+								<p:outputLabel value="Usuário: " for="usuario"
 									styleClass="label-form" />
-								<p:inputText id="codigo"
-									placeholder="Insira o código do produto" required="true"
-									requiredMessage="O campo 'Código' é obrigatório!"
+								<p:inputText id="usuario"
+									placeholder="Insira um nome de usuário" required="true"
+									requiredMessage="O campo 'Usuário' é obrigatório!"
 									value="#{cadastroCategoriaBean.categoria.descricao}"
 									style="width: 98%" />
-									
 
-								<p:outputLabel value="Quantidade: " for="qtd"
+								<p:outputLabel value="Senha: " for="senha"
 									styleClass="label-form" />
-								<p:inputText id="qtd" required="true" type="number"
-									requiredMessage="O campo 'Quantidade' é obrigatório!"
+								<p:password id="senha" placeholder="Insira a senha"
+									required="true"
+									requiredMessage="O campo 'Senha' é obrigatório!"
 									value="#{cadastroCategoriaBean.categoria.descricao}"
-									style="width: 30%" />
-									
+									style="width: 98%" />
 
-								<p:outputLabel value="Quantidade Mínima: " for="qtdmin"
-									styleClass="label-form" />
-								<p:inputText id="qtdmin" required="true" type="number"
-									requiredMessage="O campo 'Quantidade mínima' é obrigatório!"
-									value="#{cadastroCategoriaBean.categoria.descricao}"
-									style="width: 30%" />
-									
 
-								<p:outputLabel value="Preço de Compra: " for="precdecompra"
+								<p:outputLabel value="E-mail: " for="email"
 									styleClass="label-form" />
-								<p:inputText id="precdecompra" required="true"
-									requiredMessage="O campo 'Preço de Compra' é obrigatório!"
+								<p:inputText id="email" placeholder="Insira seu email"
+									required="true"
+									requiredMessage="O campo 'E-mail' é obrigatório!"
 									value="#{cadastroCategoriaBean.categoria.descricao}"
-									style="width: 30%" />
-									
+									style="width: 98%" />
 
-								<p:outputLabel value="Preço de Venda: " for="precdevenda"
+
+								<p:outputLabel value="Telefone: " for="telefone"
 									styleClass="label-form" />
-								<p:inputText id="precdevenda" required="true"
-									requiredMessage="O campo 'Preço de venda' é obrigatório!"
+								<p:inputMask id="telefone" placeholder="Insira seu telefone"
+									required="true" mask="(99) 99999-9999"
+									requiredMessage="O campo 'Telefone' é obrigatório!"
 									value="#{cadastroCategoriaBean.categoria.descricao}"
-									style="width: 30%" />
-									
-								<p:outputLabel value="Fornecedor: " for="fornecedor"
+									style="width: 98%" />
+
+								<p:outputLabel value="Perfil: " for="perfil"
 									styleClass="label-form" />
-								<p:selectOneMenu id="fornecedor" style="width:40%">
+								<p:selectOneMenu id="perfil" style="width:40%">
 									<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
 									<f:selectItems value="" />
 								</p:selectOneMenu>
-														
+
 								<hr />
 								<p:commandButton value="Salvar" icon="fa fa-save"
 									action="#{cadastroCategoriaBean.salvar()}"
